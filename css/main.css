@@ -1,0 +1,157 @@
+.musicBox {
+  font: 9px "Lucida Sans Unicode", "Trebuchet MS", Arial, Helvetica;
+  background-color: #212121;
+  /*设置边框的弧度值，为3px*/
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  /*阴影*/
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 10px 10px 25px #ccc;
+  -moz-box-shadow: 10px 10px 25px #ccc;
+  box-shadow: 10px 10px 25px #ccc;
+  /*透明度*/
+  opacity: 0.9;
+  /*基本性质*/
+  padding: 2px 5px;
+  position: absolute;
+  z-index: 9;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #488bf0 #488bf0 #488bf0 #488bf0;
+  width: 775px;
+  height: 40px;
+}
+
+.leftControl {
+  width: 0px;
+  padding: 10px 10px 10px 10px;
+  float: left;
+  height: 20px;
+  background: url(../images/sk-dark.png) left 2px no-repeat;
+  margin-right: 8px;
+  margin-left: 10px;
+}
+
+.leftControl:hover {
+  background: url(../images/sk-dark.png) left -30px no-repeat;
+}
+
+.mainControl {
+  width: 25px;
+  padding: 10px 15px 5px 10px;
+  float: left;
+  height: 20px;
+  background: url(../images/sk-dark.png) -80px -130px no-repeat;
+}
+
+.mainControl:hover {
+  background: url(../images/sk-dark.png) -80px -166px no-repeat;
+}
+
+.rightControl {
+  width: 0px;
+  padding: 10px 10px 10px 10px;
+  float: left;
+  height: 20px;
+  background: url(../images/sk-dark.png) left -62px no-repeat;
+  margin-right: 8px;
+}
+
+.rightControl:hover {
+  background: url(../images/sk-dark.png) left -93px no-repeat;
+}
+
+.processControl {
+  width: 500px;
+  padding: 5px 10px 10px 10px;
+  float: left;
+  height: 20px;
+  margin-right: 12px;
+  color: #ffffff;
+}
+
+.processControl .songName {
+  float: left;
+}
+
+.processControl .songTime {
+  float: right;
+}
+
+.processControl .process {
+  width: 500px;
+  float: left;
+  height: 2px;
+  cursor: pointer;
+  background-color: #000000;
+  margin-top: 7px;
+}
+
+.processControl .processYet {
+  width: 0px;
+  position: absolute;
+  height: 2px;
+  left: 131px;
+  top: 30px;
+  cursor: pointer;
+  background-color: #7a8093;
+}
+
+.voiceEmp {
+  width: 0px;
+  padding: 10px 10px 10px 10px;
+  float: left;
+  height: 17px;
+  background: url(../images/sk-dark.png) -28px -180px no-repeat;
+  margin-right: 2px;
+}
+
+.voiceEmp:hover {
+  background: url(../images/sk-dark.png) -28px -212px no-repeat;
+}
+
+.voidProcess {
+  width: 66px;
+  height: 2px;
+  cursor: pointer;
+  background-color: #000;
+  float: left;
+  margin-top: 19px;
+  margin-right: 6px;
+}
+
+.voidProcessYet {
+  width: 66px;
+  position: absolute;
+  height: 2px;
+  left: 675px;
+  top: 21px;
+  cursor: pointer;
+  background-color: #7a8093;
+}
+
+.voiceFull {
+  width: 0px;
+  padding: 10px 10px 10px 10px;
+  float: left;
+  height: 17px;
+  background: url(../images/sk-dark.png) -28px -116px no-repeat;
+}
+
+.voiceFull:hover {
+  background: url(../images/sk-dark.png) -28px -148px no-repeat;
+}
+
+.stopControl {
+  width: 14px;
+  padding: 10px 10px 5px 10px;
+  float: left;
+  height: 20px;
+  background: url(../images/sk-dark.png) -50px -130px no-repeat;
+  margin-right: 16px;
+}
+
+.stopControl:hover {
+  background: url(../images/sk-dark.png) -50px -165px no-repeat;
+}

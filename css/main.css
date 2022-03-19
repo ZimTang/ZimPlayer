@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+
 .musicBox {
   font: 9px "Lucida Sans Unicode", "Trebuchet MS", Arial, Helvetica;
   background-color: #212121;
@@ -19,7 +30,7 @@
   border-width: 1px;
   border-style: solid;
   border-color: #488bf0 #488bf0 #488bf0 #488bf0;
-  width: 775px;
+  width: 795px;
   height: 40px;
 }
 
@@ -93,7 +104,7 @@
   position: absolute;
   height: 2px;
   left: 131px;
-  top: 30px;
+  top: 28px;
   cursor: pointer;
   background-color: #7a8093;
 }

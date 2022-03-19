@@ -1,3 +1,8 @@
+/**
+ * 转换音乐播放时间
+ * @param {*} times 音乐播放持续时间
+ * @returns 00：00格式的时间
+ */
 function timeToMinute(times) {
   var t;
   if (times > -1) {

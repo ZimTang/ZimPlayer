@@ -1,3 +1,4 @@
+// 199010120唐梓铭
 const audio = document.querySelector("#audio");
 const songName = document.querySelector("#songName");
 const stopControl = document.querySelector("#stopControl");
@@ -15,6 +16,9 @@ const voidProcess = document.querySelector("#voidProcess");
 const musicNameBySrc = getName(window.decodeURI(audio.src));
 songName.innerHTML = musicNameBySrc;
 
+// 记录上一次暂停的时间
+let lastTime = "00:00";
+
 // 根据src获取歌曲名称
 function getName(src) {
   const arr = src.split("/");
@@ -24,12 +28,13 @@ function getName(src) {
 
 // 播放的回调
 mainControl.addEventListener("click", () => {
-  // todo:fix 当重新开始点击播放时，时间会出现问题
   audio.play();
   stopControl.style.display = "block";
   mainControl.style.display = "none";
   // 持续时间
-  songTime.innerHTML = `00:00&nbsp;|&nbsp;${timeToMinute(audio.duration)}`;
+  songTime.innerHTML = `${lastTime}&nbsp;|&nbsp;${timeToMinute(
+    audio.duration
+  )}`;
 });
 
 // 暂停的回调
@@ -37,30 +42,31 @@ stopControl.addEventListener("click", () => {
   audio.pause();
   stopControl.style.display = "none";
   mainControl.style.display = "block";
+  lastTime = timeToMinute(audio.currentTime);
 });
 
 /**
  * changeNum
  * @param {*} type add or minus
  * @param {*} num 变化值
- * @returns (audio) => { audio.currentTime += num or audio.currentTime -= num }
+ * @returns () => {audio.currentTime += num or -= num}
  */
 function changNum(type, num) {
   if (type === "add") {
-    return (audio) => {
+    return () => {
       audio.currentTime += num;
     };
   } else if (type === "minus") {
-    return (audio) => {
+    return () => {
       audio.currentTime -= num;
     };
   }
 }
 
 // 快退的回调
-leftControl.addEventListener("click", changNum("minus", 5)(audio));
+leftControl.addEventListener("click", changNum("minus", 5));
 // 快进的回调
-rightControl.addEventListener("click", changNum("add", 5)(audio));
+rightControl.addEventListener("click", changNum("add", 5));
 
 // 改变时间
 function changeCurrentTime() {
